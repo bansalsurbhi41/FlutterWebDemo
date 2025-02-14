@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../color_const.dart';
+import '../shared/constants/color_const.dart';
 import '../shared/utilities/utils.dart';
 
 class CircleClusterUI extends StatelessWidget {

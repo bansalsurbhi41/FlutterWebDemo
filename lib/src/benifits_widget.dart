@@ -1,18 +1,19 @@
 
 import 'package:flutter/material.dart';
+import 'package:nill_web/src/shared/constants/string_constants.dart';
 import 'package:nill_web/src/shared/utilities/utils.dart';
 import 'package:nill_web/src/widget/ui_grid_widget.dart';
 
-import 'color_const.dart';
+import 'shared/constants/color_const.dart';
 
-class BenifitsWidget extends StatefulWidget {
-  const BenifitsWidget({super.key});
+class BenefitsWidget extends StatefulWidget {
+  const BenefitsWidget({super.key});
 
   @override
-  State<BenifitsWidget> createState() => _BenifitsWidgetState();
+  State<BenefitsWidget> createState() => _BenefitsWidgetState();
 }
 
-class _BenifitsWidgetState extends State<BenifitsWidget> {
+class _BenefitsWidgetState extends State<BenefitsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,11 +43,11 @@ class _BenifitsWidgetState extends State<BenifitsWidget> {
                   ? benifitTitle()
                   : Center(child: benifitTitle()),
               const SizedBox(height: 61),
-              benifitWidget(icon: Icons.stars_sharp, title: 'Online Degrees', subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut\naliquam, purus sit amet luctus venenatis, lectus magna\nfringilla urna, porttitor rhoncus dolor purus non enim'),
+              benifitWidget(icon: Icons.stars_sharp, title: kOnlineDegrees, subTitle: kOnlineDegreesDesc),
               const SizedBox(height: 50),
-              benifitWidget(icon: Icons.book_rounded, title: 'Short courses', subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut\naliquam, purus sit amet luctus venenatis'),
+              benifitWidget(icon: Icons.book_rounded, title: kShortCourses, subTitle: kShortCoursesDesc),
               const SizedBox(height: 50),
-              benifitWidget(icon: Icons.person_outline_outlined, title: 'Expert Traning', subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut\naliquam, purus'),
+              benifitWidget(icon: Icons.person_outline_outlined, title: kExpertTraning, subTitle: kExpertTraningDesc),
             ],
           )
 
@@ -58,11 +59,11 @@ class _BenifitsWidgetState extends State<BenifitsWidget> {
   }
 
   Widget benifitTitle() {
-    return Text('Benifits from our online\nlearning',
+    return Text(kBenefitsTitle,
       style: TextStyle(
           height: 1.2,
-          fontFamily: 'Lato',
-          fontSize: Utils.responsiveSize(context: context, webValue: 48, tabValue: 48, tab2Value: 35, mobileValue: 34),
+          fontFamily: kFontFamily,
+          fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 48, tabValue: 48, tab2Value: 35, mobileValue: 34),
           color: Colors.white,
           fontWeight: FontWeight.w800
       ),);
@@ -75,15 +76,15 @@ class _BenifitsWidgetState extends State<BenifitsWidget> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: Utils.responsiveSize(context: context, webValue: 80, tabValue: 65, tab2Value: 55, mobileValue: 50),
-            width: Utils.responsiveSize(context: context, webValue: 80, tabValue: 65, tab2Value: 55, mobileValue: 50),
+            height: Utils.responsiveSizeByWidth(context: context, webValue: 80, tabValue: 65, tab2Value: 55, mobileValue: 50),
+            width: Utils.responsiveSizeByWidth(context: context, webValue: 80, tabValue: 65, tab2Value: 55, mobileValue: 50),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(50),
             ),
             child: Icon(
                 icon ,
-                size: Utils.responsiveSize(context: context, webValue: 50, tabValue: 40, tab2Value: 35, mobileValue: 30),
+                size: Utils.responsiveSizeByWidth(context: context, webValue: 50, tabValue: 40, tab2Value: 35, mobileValue: 30),
                 color: primaryDarkPurple
             ),
           ),
@@ -93,16 +94,16 @@ class _BenifitsWidgetState extends State<BenifitsWidget> {
             children: [
               Text(title,
                 style: TextStyle(
-                    fontFamily: 'Lato',
-                    fontSize: Utils.responsiveSize(context: context, webValue: 24, tabValue: 22, tab2Value: 20, mobileValue: 18),
+                    fontFamily: kFontFamily,
+                    fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 24, tabValue: 22, tab2Value: 20, mobileValue: 18),
                     color: Colors.white,
                     fontWeight: FontWeight.w600
                 ),),
               const SizedBox(height: 10),
               Text(subTitle,
                 style: TextStyle(
-                    fontFamily: 'Lato',
-                    fontSize: Utils.responsiveSize(context: context, webValue: 14, tabValue: 14, tab2Value: 14, mobileValue: 12),
+                    fontFamily: kFontFamily,
+                    fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 14, tabValue: 14, tab2Value: 14, mobileValue: 12),
                     color: Colors.white,
                     fontWeight: FontWeight.w400
                 ),),
