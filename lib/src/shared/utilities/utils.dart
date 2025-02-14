@@ -26,7 +26,7 @@ class Utils {
 
   // widget.screenWidth < 767
 
-  static double responsiveSize({required BuildContext context, required double webValue, required double tabValue,  required double tab2Value, required double mobileValue,}) {
+  static double responsiveSizeByWidth({required BuildContext context, required double webValue, required double tabValue,  required double tab2Value, required double mobileValue,}) {
     if (screenWidth(context) <= 520) {
       return mobileValue;
     } else if (screenWidth(context) >= 767 && screenWidth(context) <= 1024) {

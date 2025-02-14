@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:nill_web/src/shared/constants/image_const.dart';
+import 'package:nill_web/src/shared/constants/string_constants.dart';
 import 'package:nill_web/src/shared/utilities/utils.dart';
 import 'package:nill_web/src/widget/directional_wave_clipper.dart';
 
-import 'color_const.dart';
+import 'shared/constants/color_const.dart';
 
 class ContactDetails extends StatefulWidget {
   const ContactDetails({super.key});
@@ -41,27 +43,27 @@ class _ContactDetailsState extends State<ContactDetails> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/images/logo.png', width: Utils.responsiveDouble(context: context, value: 80)),
+                  Image.asset(ImageConst.logo, width: Utils.responsiveDouble(context: context, value: 80)),
                   const SizedBox(height: 32),
                   SizedBox(
                       width: 220,
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
+                        kLorem,
                         style: TextStyle(
-                            fontSize: Utils.responsiveSize(context: context, webValue: 18, tabValue: 17.5, tab2Value: 18, mobileValue: 18),
+                            fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 18, tabValue: 17.5, tab2Value: 18, mobileValue: 18),
                           color: Colors.white,
-                          fontFamily: 'Lato',
+                          fontFamily: kFontFamily,
                           fontWeight: FontWeight.w500
                         ),
                       )),
                   const SizedBox(height: 22),
                   Row(
                     children: [
-                      Image.asset('assets/images/be.png', width: 30),
+                      Image.asset(ImageConst.be, width: 30),
                       const SizedBox(width: 27),
-                      Image.asset('assets/images/Linkedin.png', width: Utils.responsiveDouble(context: context, value: 22)),
+                      Image.asset(ImageConst.linkedin, width: Utils.responsiveDouble(context: context, value: 22)),
                       const SizedBox(width: 27),
-                      Image.asset('assets/images/facebook.png', width: Utils.responsiveDouble(context: context, value: 22)),
+                      Image.asset(ImageConst.facebook, width: Utils.responsiveDouble(context: context, value: 22)),
                     ],
                   )
                 ],
@@ -69,59 +71,58 @@ class _ContactDetailsState extends State<ContactDetails> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  headingTextWidget(context: context, text: 'Company'),
+                  headingTextWidget(context: context, text: kCompany),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'About Us'),
+                  textWidget(context: context, text: kAboutUs),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Services'),
+                  textWidget(context: context, text: kServices),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Community'),
+                  textWidget(context: context, text: kCommunity),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Testimonial'),
+                  textWidget(context: context, text: kTestimonial),
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  headingTextWidget(context: context, text: 'Support'),
+                  headingTextWidget(context: context, text: kSupport),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Help Center'),
+                  textWidget(context: context, text: kHelpCenter),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Tweet @ Us'),
+                  textWidget(context: context, text: kTweetUs),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Webians'),
+                  textWidget(context: context, text: kWebians),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Feedback'),
+                  textWidget(context: context, text: kFeedback),
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  headingTextWidget(context: context, text: 'Links'),
+                  headingTextWidget(context: context, text: kLinks),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Courses'),
+                  textWidget(context: context, text: kCourses),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Become Teacher'),
+                  textWidget(context: context, text: kBecomeTeacher),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'Service'),
+                  textWidget(context: context, text: kService),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'All in One'),
+                  textWidget(context: context, text: kAllInOne),
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  headingTextWidget(context: context, text: 'Contact Us'),
+                  headingTextWidget(context: context, text: kContactUs),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: '(91) 98765  4321 5'),
+                  textWidget(context: context, text: kMobileNum),
                   const SizedBox(height: 32),
-                  textWidget(context: context, text: 'support@mail.com'),
+                  textWidget(context: context, text: kEmail),
                 ],
               ),
             ],
           )
               : Utils.screenWidth(context) < 520
-          ////////////////////////////// Working here
               ? Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,15 +133,15 @@ class _ContactDetailsState extends State<ContactDetails> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset('assets/images/logo.png', width: Utils.responsiveDouble(context: context, value: 80)),
+                      Image.asset(ImageConst.logo, width: Utils.responsiveDouble(context: context, value: 80)),
                       const SizedBox(height: 32),
                       Row(
                         children: [
-                          Image.asset('assets/images/be.png', width: 30),
+                          Image.asset(ImageConst.be, width: 30),
                           const SizedBox(width: 27),
-                          Image.asset('assets/images/Linkedin.png', width: Utils.responsiveDouble(context: context, value: 22)),
+                          Image.asset(ImageConst.linkedin, width: Utils.responsiveDouble(context: context, value: 22)),
                           const SizedBox(width: 27),
-                          Image.asset('assets/images/facebook.png', width: Utils.responsiveDouble(context: context, value: 22)),
+                          Image.asset(ImageConst.facebook, width: Utils.responsiveDouble(context: context, value: 22)),
                         ],
                       )
                     ],
@@ -148,11 +149,11 @@ class _ContactDetailsState extends State<ContactDetails> {
                   SizedBox(
                       width: 220,
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
+                        kLorem,
                         style: TextStyle(
-                            fontSize: Utils.responsiveSize(context: context, webValue: 18, tabValue: 17.5, tab2Value: 18, mobileValue: 18),
+                            fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 18, tabValue: 17.5, tab2Value: 18, mobileValue: 18),
                             color: Colors.white,
-                            fontFamily: 'Lato',
+                            fontFamily: kFontFamily,
                             fontWeight: FontWeight.w500
                         ),
                       )),
@@ -168,23 +169,22 @@ class _ContactDetailsState extends State<ContactDetails> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ContactOptionWidget( headingText: 'Company', index: 1),
+                  const ContactOptionWidget( headingText: kCompany, index: 1),
                   divisionWidget(),
-                  const ContactOptionWidget(headingText: 'Support', index: 2),
+                  const ContactOptionWidget(headingText: kSupport, index: 2),
                   divisionWidget(),
-                  const ContactOptionWidget(headingText: 'Links', index: 3),
+                  const ContactOptionWidget(headingText: kLinks, index: 3),
                   divisionWidget(),
-                  const ContactOptionWidget(headingText: 'Contact Us', index: 4),
+                  const ContactOptionWidget(headingText: kContactUs, index: 4),
                   divisionWidget(),
                 ],
               ),
 
             ],
           )
-          //////////////////////////
+
               : Column(
            mainAxisSize: MainAxisSize.min,
-            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -192,15 +192,15 @@ class _ContactDetailsState extends State<ContactDetails> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset('assets/images/logo.png', width: Utils.responsiveDouble(context: context, value: 80)),
+                      Image.asset(ImageConst.logo, width: Utils.responsiveDouble(context: context, value: 80)),
                       const SizedBox(height: 32),
                       Row(
                         children: [
-                          Image.asset('assets/images/be.png', width: 30),
+                          Image.asset(ImageConst.be, width: 30),
                           const SizedBox(width: 27),
-                          Image.asset('assets/images/Linkedin.png', width: Utils.responsiveDouble(context: context, value: 22)),
+                          Image.asset(ImageConst.linkedin, width: Utils.responsiveDouble(context: context, value: 22)),
                           const SizedBox(width: 27),
-                          Image.asset('assets/images/facebook.png', width: Utils.responsiveDouble(context: context, value: 22)),
+                          Image.asset(ImageConst.facebook, width: Utils.responsiveDouble(context: context, value: 22)),
                         ],
                       )
                     ],
@@ -208,11 +208,11 @@ class _ContactDetailsState extends State<ContactDetails> {
                   SizedBox(
                       width: 220,
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
+                        kLorem,
                         style: TextStyle(
-                            fontSize: Utils.responsiveSize(context: context, webValue: 18, tabValue: 17.5, tab2Value: 18, mobileValue: 18),
+                            fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 18, tabValue: 17.5, tab2Value: 18, mobileValue: 18),
                             color: Colors.white,
-                            fontFamily: 'Lato',
+                            fontFamily: kFontFamily,
                             fontWeight: FontWeight.w500
                         ),
                       )),
@@ -232,53 +232,53 @@ class _ContactDetailsState extends State<ContactDetails> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      headingTextWidget(context: context, text: 'Company'),
+                      headingTextWidget(context: context, text: kCompany),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'About Us'),
+                      textWidget(context: context, text: kAboutUs),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Services'),
+                      textWidget(context: context, text: kServices),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Community'),
+                      textWidget(context: context, text: kCommunity),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Testimonial'),
+                      textWidget(context: context, text: kTestimonial),
                     ],
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      headingTextWidget(context: context, text: 'Support'),
+                      headingTextWidget(context: context, text: kSupport),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Help Center'),
+                      textWidget(context: context, text: kHelpCenter),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Tweet @ Us'),
+                      textWidget(context: context, text: kTweetUs),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Webians'),
+                      textWidget(context: context, text: kWebians),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Feedback'),
+                      textWidget(context: context, text: kFeedback),
                     ],
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      headingTextWidget(context: context, text: 'Links'),
+                      headingTextWidget(context: context, text: kLinks),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Courses'),
+                      textWidget(context: context, text: kCourses),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Become Teacher'),
+                      textWidget(context: context, text: kBecomeTeacher),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'Service'),
+                      textWidget(context: context, text: kService),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'All in One'),
+                      textWidget(context: context, text: kAllInOne),
                     ],
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      headingTextWidget(context: context, text: 'Contact Us'),
+                      headingTextWidget(context: context, text: kContactUs),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: '(91) 98765  4321 5'),
+                      textWidget(context: context, text: kMobileNum),
                       const SizedBox(height: 32),
-                      textWidget(context: context, text: 'support@mail.com'),
+                      textWidget(context: context, text: kEmail),
                     ],
                   ),
                 ],
@@ -300,54 +300,15 @@ class _ContactDetailsState extends State<ContactDetails> {
     );
   }
 
-  /*Widget contactOption ({required String headingText, required int index}){
-    bool is1IndexOn = false;
-    bool is2IndexOn = false;
-    bool is3IndexOn = false;
-    bool is4IndexOn = false;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24 ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          headingTextWidget(text: headingText),
-          IconButton(
-              onPressed: () {
-                switch(index) {
-                  case 1 :
-                    is1IndexOn = true;
-                    break;
-                  case 2 :
-                    is2IndexOn = true;
-                    break;
-                  case 3 :
-                    is3IndexOn = true;
-                    break;
-                  case 4 :
-                    is4IndexOn = true;
-                    break;
-                }
-
-
-          },
-              icon: const Icon(Icons.arrow_drop_down, color: Colors.white,))
-        ],
-      ),
-    );
-  }*/
-
-
-
-
 }
 
 Widget headingTextWidget({ required BuildContext context, required String text}){
   return Text(
     text,
     style: TextStyle(
-        fontSize: Utils.responsiveSize(context: context, webValue: 24, tabValue: 20, tab2Value: 18, mobileValue: 18),
+        fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 24, tabValue: 20, tab2Value: 18, mobileValue: 18),
         color: Colors.white,
-        fontFamily: 'Lato',
+        fontFamily: kFontFamily,
         fontWeight: FontWeight.w600
     ),
   );
@@ -357,9 +318,9 @@ Widget textWidget({required BuildContext context, required String text}){
   return Text(
     text,
     style: TextStyle(
-        fontSize: Utils.responsiveSize(context: context, webValue: 18, tabValue: 16, tab2Value: 14, mobileValue: 15),
+        fontSize: Utils.responsiveSizeByWidth(context: context, webValue: 18, tabValue: 16, tab2Value: 14, mobileValue: 15),
         color: Colors.white,
-        fontFamily: 'Lato',
+        fontFamily: kFontFamily,
         fontWeight: FontWeight.w600
     ),
   );
@@ -410,13 +371,13 @@ class _ContactOptionWidgetState extends State<ContactOptionWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 25),
-                textWidget(context: context, text: 'About Us'),
+                textWidget(context: context, text: kAboutUs),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Services'),
+                textWidget(context: context, text: kServices),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Community'),
+                textWidget(context: context, text: kCommunity),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Testimonial'),
+                textWidget(context: context, text: kTestimonial),
               ],
             ),
           if(activeIndex == 2)
@@ -424,13 +385,13 @@ class _ContactOptionWidgetState extends State<ContactOptionWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 25),
-                textWidget(context: context, text: 'Help Center'),
+                textWidget(context: context, text: kHelpCenter),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Tweet @ Us'),
+                textWidget(context: context, text: kTweetUs),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Webians'),
+                textWidget(context: context, text: kWebians),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Feedback'),
+                textWidget(context: context, text: kFeedback),
               ],
             ),
           if(activeIndex == 3)
@@ -438,13 +399,13 @@ class _ContactOptionWidgetState extends State<ContactOptionWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 25),
-                textWidget(context: context, text: 'Courses'),
+                textWidget(context: context, text: kCourses),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Become Teacher'),
+                textWidget(context: context, text: kBecomeTeacher),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'Service'),
+                textWidget(context: context, text: kService),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'All in One'),
+                textWidget(context: context, text: kAllInOne),
               ],
             ),
           if(activeIndex == 4)
@@ -452,9 +413,9 @@ class _ContactOptionWidgetState extends State<ContactOptionWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 25),
-                textWidget(context: context, text: '(91) 98765  4321 5'),
+                textWidget(context: context, text: kMobileNum),
                 const SizedBox(height: 20),
-                textWidget(context: context, text: 'support@mail.com'),
+                textWidget(context: context, text: kEmail),
               ],
             ),
         ],

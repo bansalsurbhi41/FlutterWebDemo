@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../color_const.dart';
+import '../shared/constants/color_const.dart';
+import '../shared/constants/string_constants.dart';
 import 'home_page_body.dart';
 
 
@@ -10,7 +11,7 @@ class WebWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      key: Key('web'),
+      key: Key(kKeyWeb),
       backgroundColor: primaryWhite,
       body: HomePageBody(),
     );

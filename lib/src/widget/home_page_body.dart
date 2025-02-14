@@ -8,7 +8,6 @@ import '../instructions.dart';
 import '../popular_courses.dart';
 import '../shared/utilities/utils.dart';
 
-
 class HomePageBody extends StatelessWidget {
   const HomePageBody({super.key});
 
@@ -17,14 +16,24 @@ class HomePageBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          HomePageHeader(screenHeight: Utils.screenHeight(context),screenWidth: Utils.screenWidth(context)),
-          const SizedBox(height: 90,),
-          PopularCourses(screenHeight: Utils.screenHeight(context),screenWidth: Utils.screenWidth(context)),
-          const SizedBox(height: 181,),
-          const BenifitsWidget(),
-          const SizedBox(height: 20,),
+          HomePageHeader(
+              screenHeight: Utils.screenHeight(context), screenWidth: Utils.screenWidth(context)),
+          const SizedBox(
+            height: 90,
+          ),
+          PopularCourses(
+              screenHeight: Utils.screenHeight(context), screenWidth: Utils.screenWidth(context)),
+          const SizedBox(
+            height: 181,
+          ),
+          const BenefitsWidget(),
+          const SizedBox(
+            height: 20,
+          ),
           const Instructions(),
-          SizedBox(height: Utils.responsiveSize(context: context, webValue: 90, tabValue: 90, mobileValue: 0, tab2Value: 90)),
+          SizedBox(
+              height: Utils.responsiveSizeByWidth(
+                  context: context, webValue: 90, tabValue: 90, mobileValue: 0, tab2Value: 90)),
           const Stack(
             alignment: Alignment.topCenter,
             children: [
@@ -34,7 +43,6 @@ class HomePageBody extends StatelessWidget {
                   ContactDetails(),
                 ],
               ),
-
               RegisterWidget()
             ],
           ),

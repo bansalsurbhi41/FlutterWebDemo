@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:nill_web/src/shared/constants/image_const.dart';
+import 'package:nill_web/src/shared/constants/string_constants.dart';
 import 'package:nill_web/src/shared/utilities/utils.dart';
 import 'package:nill_web/src/widget/directional_wave_clipper.dart';
 
-import 'color_const.dart';
+import 'shared/constants/color_const.dart';
 
 class HomePageHeader extends StatefulWidget {
   const HomePageHeader({
@@ -52,7 +54,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                             Expanded(
                               flex: 1,
                               child: Image.asset(
-                                'assets/images/logo.png',
+                                ImageConst.logo,
                                 width: Utils.responsiveDouble(context: context, value: 80),
                                 height: Utils.responsiveDouble(context: context, value: 35),
                                 fit: BoxFit.contain,
@@ -67,7 +69,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                 children: [
                                   Row(
                                     children: [
-                                      headerText(context: context, text: 'Courses'),
+                                      headerText(context: context, text: kCourses),
                                       Icon(
                                         Icons.arrow_drop_down_sharp,
                                         color: Colors.white,
@@ -77,7 +79,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                   ),
                                   Row(
                                     children: [
-                                      headerText(context: context, text: 'Platforms'),
+                                      headerText(context: context, text: kPlatforms),
                                       Icon(
                                         Icons.arrow_drop_down_sharp,
                                         color: Colors.white,
@@ -85,8 +87,8 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                       )
                                     ],
                                   ),
-                                  headerText(context: context, text: 'Resources'),
-                                  headerText(context: context, text: 'About'),
+                                  headerText(context: context, text: kResources),
+                                  headerText(context: context, text: kAbout),
                                 ],
                               ),
                             )
@@ -98,7 +100,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image.asset(
-                              'assets/images/Mask_Group.png',
+                              ImageConst.maskGroup,
                               width: widget.screenWidth * 0.32,
                               height: widget.screenWidth * 0.32,
                               fit: BoxFit.cover,
@@ -108,12 +110,12 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "A revolutionary\nway to educate.",
+                                    kARevolutionaryWayToEducate,
                                     style: TextStyle(
                                         height: 1.4,
                                         letterSpacing: widget.screenWidth < 767 ? 0.5 : 1.2,
-                                        fontFamily: 'Lato',
-                                        fontSize: Utils.responsiveSize(
+                                        fontFamily: kFontFamily,
+                                        fontSize: Utils.responsiveSizeByWidth(
                                             context: context,
                                             webValue:
                                                 Utils.responsiveDouble(context: context, value: 35),
@@ -127,16 +129,16 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                     height: 15,
                                   ),
                                   Text(
-                                    '“Online education is electronically supported learning that relies on the Internet for teacher/student interaction and the distribution of class materials.”',
+                                    kARevolutionaryWayToEducateDesc,
                                     style: TextStyle(
-                                        fontSize: Utils.responsiveSize(
+                                        fontSize: Utils.responsiveSizeByWidth(
                                             context: context,
                                             webValue:
                                                 Utils.responsiveDouble(context: context, value: 12),
                                             tabValue: 14,
                                             tab2Value: 14,
                                             mobileValue: 14),
-                                        fontFamily: 'Lato',
+                                        fontFamily: kFontFamily,
                                         fontWeight: FontWeight.w100,
                                         color: Colors.white),
                                   ),
@@ -146,7 +148,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                     children: [
                                       CircleAvatar(
                                         backgroundColor: Colors.white,
-                                        radius: Utils.responsiveSize(
+                                        radius: Utils.responsiveSizeByWidth(
                                             context: context,
                                             webValue:
                                                 Utils.responsiveDouble(context: context, value: 14),
@@ -154,7 +156,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                             tab2Value: 24,
                                             mobileValue: 20),
                                         child: Icon(Icons.play_arrow,
-                                            size: Utils.responsiveSize(
+                                            size: Utils.responsiveSizeByWidth(
                                                 context: context,
                                                 webValue: Utils.responsiveDouble(
                                                     context: context, value: 19),
@@ -167,16 +169,16 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                         width: 20,
                                       ),
                                       Text(
-                                        "What’s null?",
+                                        kWhatsNull,
                                         style: TextStyle(
-                                            fontSize: Utils.responsiveSize(
+                                            fontSize: Utils.responsiveSizeByWidth(
                                                 context: context,
                                                 webValue: Utils.responsiveDouble(
                                                     context: context, value: 12),
                                                 tabValue: 14,
                                                 tab2Value: 14,
                                                 mobileValue: 14),
-                                            fontFamily: 'Lato',
+                                            fontFamily: kFontFamily,
                                             fontWeight: FontWeight.w300,
                                             color: Colors.white),
                                       ),
@@ -195,7 +197,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Image.asset(
-                              'assets/images/Mask_Group.png',
+                              ImageConst.maskGroup,
                               width: widget.screenWidth * 0.60,
                               height: widget.screenWidth * 0.60,
                               fit: BoxFit.cover,
@@ -204,12 +206,12 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                               height: 20,
                             ),
                             Text(
-                              "A revolutionary\nway to educate.",
+                              kARevolutionaryWayToEducate,
                               style: TextStyle(
                                   height: 1.4,
                                   letterSpacing: widget.screenWidth < 767 ? 0.5 : 1.2,
-                                  fontFamily: 'Lato',
-                                  fontSize: Utils.responsiveSize(
+                                  fontFamily: kFontFamily,
+                                  fontSize: Utils.responsiveSizeByWidth(
                                       context: context,
                                       webValue: Utils.responsiveDouble(context: context, value: 35),
                                       tabValue: 45,
@@ -223,21 +225,21 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                             ),
                             SizedBox(
                               child: Text(
-                                "\“Online education is electronically supported learning that\nrelies on the Internet for teacher/student interaction and\nthe distribution of class materials.\”",
+                                kARevolutionaryWayToEducateDesc2,
                                 style: TextStyle(
-                                    fontSize: Utils.responsiveSize(
+                                    fontSize: Utils.responsiveSizeByWidth(
                                         context: context,
                                         webValue:
                                             Utils.responsiveDouble(context: context, value: 12),
                                         tabValue: 12,
                                         tab2Value: 12,
                                         mobileValue: 12),
-                                    fontFamily: 'Lato',
+                                    fontFamily: kFontFamily,
                                     fontWeight: FontWeight.w100,
                                     color: Colors.white),
                               ),
                             ),
-                            SizedBox(height: 30),
+                            const SizedBox(height: 30),
                             Align(
                               alignment: Alignment.topLeft,
                               child: Row(
@@ -245,7 +247,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                 children: [
                                   CircleAvatar(
                                     backgroundColor: Colors.white,
-                                    radius: Utils.responsiveSize(
+                                    radius: Utils.responsiveSizeByWidth(
                                         context: context,
                                         webValue:
                                             Utils.responsiveDouble(context: context, value: 16),
@@ -253,7 +255,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                         tab2Value: 24,
                                         mobileValue: 20),
                                     child: Icon(Icons.play_arrow,
-                                        size: Utils.responsiveSize(
+                                        size: Utils.responsiveSizeByWidth(
                                             context: context,
                                             webValue:
                                                 Utils.responsiveDouble(context: context, value: 19),
@@ -266,16 +268,16 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                                     width: 20,
                                   ),
                                   Text(
-                                    "What’s null?",
+                                    kWhatsNull,
                                     style: TextStyle(
-                                        fontSize: Utils.responsiveSize(
+                                        fontSize: Utils.responsiveSizeByWidth(
                                             context: context,
                                             webValue:
                                                 Utils.responsiveDouble(context: context, value: 19),
                                             tabValue: 14,
                                             tab2Value: 14,
                                             mobileValue: 14),
-                                        fontFamily: 'Lato',
+                                        fontFamily: kFontFamily,
                                         fontWeight: FontWeight.w300,
                                         color: Colors.white),
                                   ),
@@ -299,12 +301,12 @@ class _HomePageHeaderState extends State<HomePageHeader> {
               dataContent(
                   color: textSubHeadingPurple,
                   icon: Icons.access_time_filled,
-                  value: '60,000+',
-                  valueType: 'Hours content'),
+                  value: k60000,
+                  valueType: kHoursContent),
               SizedBox(
                   width: Utils.screenWidth(context) >= 480 && Utils.screenWidth(context) <= 560
                       ? 49
-                      : Utils.responsiveSize(
+                      : Utils.responsiveSizeByWidth(
                           context: context,
                           webValue: 130,
                           tabValue: 100,
@@ -314,13 +316,13 @@ class _HomePageHeaderState extends State<HomePageHeader> {
               dataContent(
                 color: textSubHeadingPurple2,
                 icon: Icons.people,
-                value: '1,00,000+',
-                valueType: 'Students',
+                value: k100000,
+                valueType: kStudents,
               ),
               SizedBox(
                   width: Utils.screenWidth(context) >= 480 && Utils.screenWidth(context) <= 560
                       ? 49
-                      : Utils.responsiveSize(
+                      : Utils.responsiveSizeByWidth(
                           context: context,
                           webValue: 130,
                           tabValue: 100,
@@ -330,8 +332,8 @@ class _HomePageHeaderState extends State<HomePageHeader> {
               dataContent(
                 color: primaryDarkPurple,
                 icon: Icons.public,
-                value: '110+',
-                valueType: 'Countries',
+                value: k110,
+                valueType: kCountries,
               ),
             ],
           ),
@@ -346,9 +348,9 @@ class _HomePageHeaderState extends State<HomePageHeader> {
       required String value,
       required String valueType}) {
     return Container(
-      height: Utils.responsiveSize(
+      height: Utils.responsiveSizeByWidth(
           context: context, webValue: 183, tabValue: 175, tab2Value: 150, mobileValue: 150),
-      width: Utils.responsiveSize(
+      width: Utils.responsiveSizeByWidth(
           context: context, webValue: 160, tabValue: 135, tab2Value: 120, mobileValue: 120),
       decoration: BoxDecoration(
           color: Colors.white,
@@ -360,7 +362,7 @@ class _HomePageHeaderState extends State<HomePageHeader> {
         children: [
           Icon(
             icon,
-            size: Utils.responsiveSize(
+            size: Utils.responsiveSizeByWidth(
               context: context,
               webValue: 50,
               tabValue: 30,
@@ -369,13 +371,13 @@ class _HomePageHeaderState extends State<HomePageHeader> {
             ),
             color: color,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             value,
             style: TextStyle(
-                fontSize: Utils.responsiveSize(
+                fontSize: Utils.responsiveSizeByWidth(
                   context: context,
                   webValue: 20,
                   tabValue: 18,
@@ -385,13 +387,13 @@ class _HomePageHeaderState extends State<HomePageHeader> {
                 fontWeight: FontWeight.w600,
                 color: color),
           ),
-          SizedBox(
+          const SizedBox(
             height: 4,
           ),
           Text(
             valueType,
             style: TextStyle(
-                fontSize: Utils.responsiveSize(
+                fontSize: Utils.responsiveSizeByWidth(
                   context: context,
                   webValue: 18,
                   tabValue: 16,
@@ -412,7 +414,7 @@ Widget headerText(
   return Text(
     text,
     style: TextStyle(
-        fontSize: Utils.responsiveSize(
+        fontSize: Utils.responsiveSizeByWidth(
             context: context, webValue: 20, tabValue: 16, tab2Value: 16, mobileValue: 20),
         fontWeight: FontWeight.w400,
         color: color),
